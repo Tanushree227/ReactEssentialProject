@@ -1,7 +1,14 @@
+const reactDescriptions = ["Fundamental", "Crucial", "Core"];
+
+function getRandomInt(max)
+{
+  return Math.floor(Math.random() * (max + 1));
+}
+
 function Header() {
   return (<header>
     <img src="src/assets/react-core-concepts.png" alt="Stylized atom" />
-    <h1>OOPS Concepts in Programming</h1>
+    <h1>{reactDescriptions[getRandomInt(2)]} OOPS Concepts in Programming</h1>
     <p>
       OOPS refers to languages that use objects in programming, they use objects
       as a primary source to implement what is to happen in the code.
