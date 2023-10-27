@@ -1,3 +1,4 @@
+import reactImg from './assets/react-core-concepts.png';
 const reactDescriptions = ["Fundamental", "Crucial", "Core"];
 
 function getRandomInt(max)
@@ -7,7 +8,7 @@ function getRandomInt(max)
 
 function Header() {
   return (<header>
-    <img src="src/assets/react-core-concepts.png" alt="Stylized atom" />
+    <img src={reactImg} alt="Stylized atom" />
     <h1>{reactDescriptions[getRandomInt(2)]} OOPS Concepts in Programming</h1>
     <p>
       OOPS refers to languages that use objects in programming, they use objects
