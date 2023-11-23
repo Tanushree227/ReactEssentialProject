@@ -1,35 +1,6 @@
-import reactImg from './assets/react-core-concepts.png';
-const reactDescriptions = ["Fundamental", "Crucial", "Core"];
-import componentsImg from './assets/components.png';
 import { CORE_CONCEPTS } from './data';
-
-function getRandomInt(max)
-{
-  return Math.floor(Math.random() * (max + 1));
-}
-
-function Header() {
-  return (<header>
-    <img src={reactImg} alt="Stylized atom" />
-    <h1>{reactDescriptions[getRandomInt(2)]} OOPS Concepts in Programming</h1>
-    <p>
-      OOPS refers to languages that use objects in programming, they use objects
-      as a primary source to implement what is to happen in the code.
-      <br /> Let's deep dive to know more....
-    </p>
-  </header>);
-}
-
-function CoreConcept({image, title, description})
-{
-  return (
-    <li>
-      <img src={image} alt={title} />
-      <h3>{title}</h3>
-      <p>{description}</p>
-    </li>
-  );
-}
+import Header from './components/Header.jsx'; 
+import CoreConcept from './components/CoreConcepts.jsx';
 
 function App() {
   return (
