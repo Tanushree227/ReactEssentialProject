@@ -1,9 +1,18 @@
+import { useState } from 'react';
 import { CORE_CONCEPTS } from './data';
 import Header from './components/Header.jsx'; 
 import CoreConcept from './components/CoreConcepts.jsx';
 import TabButton from './components/TabButton.jsx';
 
 function App() {
+  
+  const [ selectedTopic, setSelectedTopic ] = useState('Please click a button');
+
+  function handleSelect(selectedButton)
+  {
+    setSelectedTopic(selectedButton);
+  }
+
   return (
     <div>
     <Header />
@@ -20,11 +29,12 @@ function App() {
         <section id='examples'>
           <h2>Examples</h2>
           <menu>
-            <TabButton>Encapsulation</TabButton>
-            <TabButton>Abstraction</TabButton>
-            <TabButton>Inheritance</TabButton>
-            <TabButton>Polymorphism</TabButton>
+            <TabButton onSelect={() => handleSelect('encapsulation')}>Encapsulation</TabButton>
+            <TabButton onSelect={() => handleSelect('abstraction')}>Abstraction</TabButton>
+            <TabButton onSelect={() => handleSelect('inheritance')}>Inheritance</TabButton>
+            <TabButton onSelect={() => handleSelect('polymorphism')}>Polymorphism</TabButton>
           </menu>
+          {selectedTopic}
         </section>
       </main>
     </div>
