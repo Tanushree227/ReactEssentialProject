@@ -21,6 +21,9 @@ function App() {
           <h2>Examples</h2>
           <menu>
             <TabButton>Encapsulation</TabButton>
+            <TabButton>Abstraction</TabButton>
+            <TabButton>Inheritance</TabButton>
+            <TabButton>Polymorphism</TabButton>
           </menu>
         </section>
       </main>
